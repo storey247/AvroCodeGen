@@ -1,0 +1,28 @@
+{
+  "type": "record", "name": "User", "namespace": "com.example",
+  "doc": "A user of the system.",
+  "fields": [
+    {"name": "id", "type": {"type": "string", "logicalType": "uuid"}},
+    {"name": "name", "type": "string"},
+    {"name": "age", "type": ["null", "int"], "default": null},
+    {"name": "score", "type": "double"},
+    {"name": "ratio", "type": "float"},
+    {"name": "active", "type": "boolean"},
+    {"name": "visits", "type": "long"},
+    {"name": "avatar", "type": ["null", "bytes"], "default": null},
+    {"name": "status", "type": {"type": "enum", "name": "Status", "symbols": ["ACTIVE", "SUSPENDED", "DELETED"]}},
+    {"name": "token", "type": {"type": "fixed", "name": "Token", "size": 4}},
+    {"name": "tags", "type": {"type": "array", "items": "string"}},
+    {"name": "attributes", "type": {"type": "map", "values": "long"}},
+    {"name": "addresses", "type": {"type": "array", "items": "com.example.Address"}},
+    {"name": "primary", "type": ["null", "com.example.Address"], "default": null},
+    {"name": "payload", "type": ["null", "string", "long", "com.example.Address"], "default": null},
+    {"name": "birth_date", "type": {"type": "int", "logicalType": "date"}},
+    {"name": "alarm", "type": {"type": "int", "logicalType": "time-millis"}},
+    {"name": "created", "type": {"type": "long", "logicalType": "timestamp-millis"}},
+    {"name": "updated", "type": {"type": "long", "logicalType": "timestamp-micros"}},
+    {"name": "balance", "type": {"type": "bytes", "logicalType": "decimal", "precision": 10, "scale": 2}},
+    {"name": "fee", "type": {"type": "fixed", "name": "Fee", "size": 8, "logicalType": "decimal", "precision": 10, "scale": 3}},
+    {"name": "friends", "type": {"type": "array", "items": ["null", "User"]}}
+  ]
+}

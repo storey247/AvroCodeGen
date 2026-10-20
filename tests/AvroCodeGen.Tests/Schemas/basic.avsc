@@ -1,0 +1,20 @@
+{
+  "type": "record", "name": "Basic", "namespace": "test.basic",
+  "fields": [
+    {"name": "i", "type": "int"},
+    {"name": "l", "type": "long"},
+    {"name": "f", "type": "float"},
+    {"name": "d", "type": "double"},
+    {"name": "b", "type": "boolean"},
+    {"name": "s", "type": "string"},
+    {"name": "bytes", "type": "bytes"},
+    {"name": "color", "type": {"type": "enum", "name": "Color", "symbols": ["RED", "GREEN", "BLUE"]}},
+    {"name": "hash", "type": {"type": "fixed", "name": "Hash", "size": 3}},
+    {"name": "ints", "type": {"type": "array", "items": "int"}},
+    {"name": "map", "type": {"type": "map", "values": "string"}},
+    {"name": "opt", "type": ["null", "string"]},
+    {"name": "multi", "type": ["null", "int", "string"]},
+    {"name": "inner", "type": {"type": "record", "name": "Inner", "fields": [{"name": "x", "type": "long"}]}},
+    {"name": "inners", "type": {"type": "array", "items": "Inner"}}
+  ]
+}
