@@ -1,4 +1,4 @@
-name: BuildAndPack
+name: Build-and-pack
 on:
   push:
     branches: [main]
