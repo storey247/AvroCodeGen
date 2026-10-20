@@ -8,10 +8,12 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>avrogen</ToolCommandName>
     <PackageId>AvroCodeGen.Tool</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.CommandLine" Version="2.0.13" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
   <ItemGroup>
